@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Pressable } from "react-native";
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Pressable } from 'react-native';
 const Screen02 = ({ navigation }) => {
 
     const array = [

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 const Screen03 = ({ navigation}) => {
     return (
         <View style={styles.container}>
             
             <View style={styles.img}>
-                <Image source={require("../img/bione.png")} style={{width: 297, height: 310, top:20, left:40,  resizeMode: 'contain'}}></Image>
+                <Image source={require('../img/bione.png')} style={{width: 297, height: 310, top:20, left:40,  resizeMode: 'contain'}}></Image>
             </View>
 
             <Text style={{width: 250, height: 35, fontWeight: 'bold', fontSize: 30, right: 55, marginTop: 10,}}>Pina Mountain</Text>
