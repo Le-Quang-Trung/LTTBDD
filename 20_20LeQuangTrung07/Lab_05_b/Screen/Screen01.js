@@ -11,13 +11,13 @@ const Screen01 = ({ navigation }) => {
         <Text style={styles.text}>A premium online store for<br></br>sporter and their stylish choice</Text>
 
         <View style={styles.image}>
-          <Image style={styles.img} source={require("../img/bifour.png")}></Image>
+          <Image style={styles.img} source={require('../img/bifour.png')}></Image>
         </View>
 
         <Text style={styles.text1}>POWER BIKE<br></br>SHOP</Text>
 
         <View style={styles.containerbtn}> 
-          <TouchableOpacity onPress={() => navigation.navigate("Screen02")}>
+          <TouchableOpacity onPress={() => navigation.navigate('Screen02')}>
             <Text style={styles.btn}>Get Started</Text>
           </TouchableOpacity>
         </View>
@@ -33,9 +33,9 @@ const styles = StyleSheet.create({
     flex: 1,
     width: 375,
     height: 812,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
     width: 351,
@@ -46,19 +46,20 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   image:{ 
-    justifyContent: "center", 
+    justifyContent: 'center', 
     width: 359,
     height: 360,
     top: 10,
     borderRadius: 50,
     backgroundColor: '#F8E6E5',
+    marginTop: 15,
   },
   img: {
     height: 292,
     width: 270,
     top: 20,
     left: 31,
-    resizeMode: "contain",
+    resizeMode: 'contain',
   },
   text1: {
     width: 351,
@@ -70,22 +71,23 @@ const styles = StyleSheet.create({
     textAlign: 'center', 
   },
   containerbtn: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   btn: {
-    display: "flex",
+    display: 'flex',
     width: 340,
     height: 61,
     backgroundColor: '#E94141',
     color: '#fff',
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     marginTop: 60,
     borderRadius: 30,
     fontWeight: 'VT323',
     fontWeight: 400,
     fontSize: 20,
+    bottom: 15,
   },
 });

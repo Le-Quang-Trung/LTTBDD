@@ -1,91 +1,79 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 const Screen03 = ({ navigation}) => {
-  return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <View style={{right: 55}}>
-        <Text>Điện thoại Vsmart Joy 3<br></br>Hàng chính hãng</Text>
-        <Text>Cung cấp bởi <b>Tiki Tradding</b></Text>
-        <Text style={{fontWeight: 'bold'}}>1.790.000đ</Text>
+    return (
+        <View style={styles.container}>
+            
+            <View style={styles.img}>
+                <Image source={require("../img/bione.png")} style={{width: 297, height: 310, top:20, left:40,  resizeMode: 'contain'}}></Image>
+            </View>
+
+            <Text style={{width: 250, height: 35, fontWeight: 'bold', fontSize: 30, right: 55, marginTop: 10,}}>Pina Mountain</Text>
+
+            <View style={{flexDirection: 'row'}}>
+                <Text style={{right: 100, color: 'grey', fontSize: 17}}>15% OFF | 350$</Text>
+                <Text style={{right: 10, fontSize: 18, textDecorationLine: 'line-through' }}>449$</Text>
+            </View>
+        
+            <Text style={{width: 130, height: 35, fontWeight: 'bold', fontSize: 23, right: 115}}>Description</Text>
+
+            <Text style={styles.description}>It is a very important form of writing as<br></br>we write almost everything in<br></br>paragraphs, be it an answer, essay, story,<br></br>emails, etc.</Text>
+            
+            <View style={styles.containerbtn}>
+                <Image source={require('../img/heart.png')} style={{width: 25, height:25, right: 30, top: 10}}></Image>
+                <TouchableOpacity onPress={() => navigation.navigate("Screen01")}>
+                    <Text style={styles.btn}>Add to card</Text>
+                </TouchableOpacity>
+            </View>
+        
         </View>
-      </View>
-      <View style={styles.footer}>
-        <Text style={{ marginLeft: -200, marginBottom: 20, fontSize: 15, fontWeight: 'bold' }}>Chọn một màu bên dưới</Text>
-
-        <TouchableOpacity style={styles.chon} onPress={() => navigation.navigate("Screen02")}>
-          <Text style={{
-              textAlign: "center",
-              lineHeight: 25,
-              color: "white",
-              fontWeight: "bold",
-              fontSize: 20,
-            }}
-          >
-            XONG
-          </Text>
-        </TouchableOpacity>
-
-      </View>
-    </View>
-  );
+    );
 };
 export default Screen03;
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "column",
-  },
-  header: {
-    flex: 2,
-    flexDirection: "row",
-    backgroundColor: "white",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  footer: {
-    flex: 8,
-    backgroundColor: "#c4c4c4",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  img: {
-    height: 100,
-    width: 100,
-    resizeMode: "contain",
-    right: 65,
-  },
-  black: {
-    height: 100,
-    width: 100,
-    backgroundColor: "black",
-  },
-  red: {
-    height: 100,
-    width: 100,
-    backgroundColor: "red",
-    marginTop: 10,
-  },
-  blue: {
-    height: 100,
-    width: 100,
-    backgroundColor: "blue",
-    marginTop: 10,
-  },
-  silver: {
-    height: 100,
-    width: 100,
-    backgroundColor: "silver",
-    marginTop: 10, 
-  },
-  chon: {
-    backgroundColor: "#4d6dc1",
-    borderColor: "red",
-    borderWidth: 1,
-    width: 300,
-    height: 30,
-    marginTop: 30,
-    borderRadius: 5,
-    textAlign: "center",
-  },
+    container: {
+        flex: 1,
+        width: 375,
+        height: 812,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+    img:{
+        width: 359,
+        height: 355,
+        borderRadius: 5,
+        backgroundColor: '#F8E6E5',
+    },
+    description:{
+        width: 375,
+        height: 104,
+        fontWeight: 'Voltaire',
+        fontWeight: 400,
+        fontSize: 18,
+        color: '#808080',
+        textAlign: 'left',
+        left: 10,
+        marginTop: 18,
+    },
+    containerbtn: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+    },
+    btn: {
+        display: 'flex',
+        width: 265,
+        height: 40,
+        backgroundColor: '#E94141',
+        color: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 30,
+        fontWeight: 'Voltaire',
+        fontWeight: 400,
+        fontSize: 20,
+        marginTop: 20,
+        bottom: 10,
+    },
 });

@@ -3,12 +3,12 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Pressable } 
 const Screen02 = ({ navigation }) => {
 
     const array = [
-        {image: require("../img/bifour.png"), name: 'Pinarello', price: '$1800'},
-        {image: require("../img/bione.png"), name: 'Pina Mountai', price: '$1700'},
-        {image: require("../img/bithree.png"), name: 'Pina Bike', price: '$1500'},
-        {image: require("../img/bitwo.png"), name: 'Pinarello', price: '$1900'},
-        {image: require("../img/bithree.png"), name: 'Pinarello', price: '$2700'},
-        {image: require("../img/bione.png"), name: 'Pinarello', price: '$1350'},
+        {image: require('../img/bifour.png'), name: 'Pinarello', price: '$1800'},
+        {image: require('../img/bione.png'), name: 'Pina Mountai', price: '$1700'},
+        {image: require('../img/bithree.png'), name: 'Pina Bike', price: '$1500'},
+        {image: require('../img/bitwo.png'), name: 'Pinarello', price: '$1900'},
+        {image: require('../img/bithree.png'), name: 'Pinarello', price: '$2700'},
+        {image: require('../img/bione.png'), name: 'Pinarello', price: '$1350'},
     ]
 
     return (
@@ -33,9 +33,9 @@ const Screen02 = ({ navigation }) => {
                 numColumns={2}
                 data={array}
                 renderItem={({item}) =>
-                <Pressable style={styles.render} onPress={() => navigation.navigate("Screen03")}>
-                    <Image source={require("../img/heart.png")} style={{width: 25, height:25, right: 60, top: 10}}></Image>
-                    <Image source={item.image} resizeMode="contain" style={{width: 128, height: 118}}></Image>
+                <Pressable style={styles.render} onPress={() => navigation.navigate('Screen03')}>
+                    <Image source={require('../img/heart.png')} style={{width: 25, height:25, right: 60, top: 10}}></Image>
+                    <Image source={item.image} resizeMode='contain' style={{width: 128, height: 118}}></Image>
                     <Text style={{width: 97, height: 25, fontWeight: 'Voltaire', textAlign: 'center'}}>{item.name}</Text>
                     <Text>{item.price}</Text>
                 </Pressable>    
@@ -55,9 +55,9 @@ const styles = StyleSheet.create({
         flex: 1,
         width: 375,
         height: 812,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
       },
     filter:{
         flexDirection: 'row',
