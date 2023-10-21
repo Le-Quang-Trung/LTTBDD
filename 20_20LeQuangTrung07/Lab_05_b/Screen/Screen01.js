@@ -10,11 +10,11 @@ const Screen01 = ({ navigation }) => {
 
         <Text style={styles.text}>A premium online store for<br></br>sporter and their stylish choice</Text>
 
-        <View style={{ flexDirection: "row", justifyContent: "center", marginTop:10, }}>
+        <View style={styles.image}>
           <Image style={styles.img} source={require("../img/bifour.png")}></Image>
         </View>
 
-        <Text style={{fontWeight: 'ubuntu', fontWeight: 700, fontSize: 26, textAlign: 'center', marginTop:15,}}>POWER BIKE<br></br>SHOP</Text>
+        <Text style={styles.text1}>POWER BIKE<br></br>SHOP</Text>
 
         <View style={styles.containerbtn}> 
           <TouchableOpacity onPress={() => navigation.navigate("Screen02")}>
@@ -38,19 +38,36 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   text: {
-    width: 375,
-    height: 812,
-    top: 61,
-    left: 12,
-    fontSize: 26,
+    width: 351,
+    height: 87,
+    top: 30,
+    fontSize: 20,
     fontWeight: 'VT323',
-    fontWeight: 400,
     textAlign: 'center',
   },
+  image:{ 
+    justifyContent: "center", 
+    width: 359,
+    height: 360,
+    top: 10,
+    borderRadius: 50,
+    backgroundColor: '#F8E6E5',
+  },
   img: {
-    height: 301,
-    width: 361,
+    height: 292,
+    width: 270,
+    top: 20,
+    left: 31,
     resizeMode: "contain",
+  },
+  text1: {
+    width: 351,
+    height: 61,
+    top: 20,
+    fontWeight: 'ubuntu',
+    fontWeight: 700, 
+    fontSize: 26, 
+    textAlign: 'center', 
   },
   containerbtn: {
     flexDirection: "row",
