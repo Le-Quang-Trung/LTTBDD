@@ -14,7 +14,7 @@ const Screen02 = ({ navigation }) => {
     return (
         <View style={styles.container}>
 
-            <Text style={{color:'#E94141', fontSize: 25, fontWeight: 'ubuntu', fontWeight: 700, top: 60, right: 50, width: 255, height: 29 }}>The world's Best Bike</Text>
+            <Text style={{color:'#E94141', fontSize: 25, fontWeight: 'ubuntu', fontWeight: 700, top: 10, right: 50, width: 255, height: 29 }}>The world's Best Bike</Text>
 
             <View style={styles.filter}>
                 <TouchableOpacity>
@@ -33,23 +33,17 @@ const Screen02 = ({ navigation }) => {
                 numColumns={2}
                 data={array}
                 renderItem={({item}) =>
-                <Pressable style={{ width: 167, height: 200, justifyContent:'center', alignItems: 'center', margin: 5}} onPress={() => navigation.navigate("Screen03")}>
+                <Pressable style={styles.render} onPress={() => navigation.navigate("Screen03")}>
+                    <Image source={require("../img/heart.png")} style={{width: 25, height:25, right: 60, top: 10}}></Image>
                     <Image source={item.image} resizeMode="contain" style={{width: 128, height: 118}}></Image>
-                    <Text>{item.name}</Text>
+                    <Text style={{width: 97, height: 25, fontWeight: 'Voltaire', textAlign: 'center'}}>{item.name}</Text>
                     <Text>{item.price}</Text>
                 </Pressable>    
                 }
                 >
-
                 </FlatList>
 
             </View>
-
-
-        
-
-
-    
 
         </View>
    
@@ -72,11 +66,21 @@ const styles = StyleSheet.create({
         width: 99,
         height: 32,
         margin: 10,
-        top: 80,
+        top: 30,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 5,
         borderWidth: 1,
-        borderColor: 'grey'
-    },      
+        borderColor: '#E94141'
+    },
+    render:{
+        width: 167, 
+        height: 170, 
+        justifyContent:'center', 
+        alignItems: 'center', 
+        margin: 5,
+        borderRadius: 15, 
+        backgroundColor: '#FEF5ED',
+  
+    },
 });
