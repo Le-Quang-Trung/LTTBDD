@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Pressable } from 'react-native';
 const Screen02 = ({ navigation }) => {
 
@@ -33,12 +33,12 @@ const Screen02 = ({ navigation }) => {
                 numColumns={2}
                 data={array}
                 renderItem={({item}) =>
-                <Pressable style={styles.render} onPress={() => navigation.navigate('Screen03')}>
-                    <Image source={require('../img/heart.png')} style={{width: 25, height:25, right: 60, top: 10}}></Image>
-                    <Image source={item.image} resizeMode='contain' style={{width: 128, height: 118}}></Image>
-                    <Text style={{width: 97, height: 25, fontWeight: 'Voltaire', textAlign: 'center'}}>{item.name}</Text>
-                    <Text>{item.price}</Text>
-                </Pressable>    
+                    <Pressable style={styles.render} onPress={() => navigation.navigate('Screen03', {item})}>
+                        <Image source={require('../img/heart.png')} style={{width: 25, height:25, right: 60, top: 10}}></Image>
+                        <Image source={item.image} resizeMode='contain' style={{width: 128, height: 118}}></Image>
+                        <Text style={{width: 97, height: 25, fontWeight: 'Voltaire', textAlign: 'center'}}>{item.name}</Text>
+                        <Text>{item.price}</Text>
+                    </Pressable>    
                 }
                 >
                 </FlatList>

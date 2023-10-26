@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+
 const Screen03 = ({ navigation, route}) => {
+    const {item} = route.params;
     return (
         <View style={styles.container}>
             
             <View style={styles.img}>
-                <Image source={route.params?.img} style={{width: 297, height: 310, top:20, left:40,  resizeMode: 'contain'}}></Image>
+                <Image source={item.image} style={{width: 297, height: 310, top:20, left:40,  resizeMode: 'contain'}}></Image>
             </View>
 
-            <Text style={{width: 250, height: 35, fontWeight: 'bold', fontSize: 30, right: 55, marginTop: 10,}}>Pina Mountain</Text>
+            <Text style={{width: 250, height: 35, fontWeight: 'bold', fontSize: 30, right: 55, marginTop: 10,}}>{item.name}</Text>
 
             <View style={{flexDirection: 'row'}}>
-                <Text style={{right: 100, color: 'grey', fontSize: 17}}>15% OFF | 350$</Text>
+                <Text style={{right: 100, color: 'grey', fontSize: 17}}>15% OFF |{item.price}$</Text>
                 <Text style={{right: 10, fontSize: 18, textDecorationLine: 'line-through' }}>449$</Text>
             </View>
         
@@ -21,7 +23,7 @@ const Screen03 = ({ navigation, route}) => {
             
             <View style={styles.containerbtn}>
                 <Image source={require('../img/heart.png')} style={{width: 25, height:25, right: 30, top: 10}}></Image>
-                <TouchableOpacity onPress={() => navigation.navigate("Screen01")}>
+                <TouchableOpacity onPress={() => navigation.navigate("Screen02")}>
                     <Text style={styles.btn}>Add to card</Text>
                 </TouchableOpacity>
             </View>
