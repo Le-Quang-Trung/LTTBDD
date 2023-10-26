@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-const Screen03 = ({ navigation}) => {
+const Screen03 = ({ navigation, route}) => {
     return (
         <View style={styles.container}>
             
