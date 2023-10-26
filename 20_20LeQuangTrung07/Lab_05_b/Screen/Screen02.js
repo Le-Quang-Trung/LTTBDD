@@ -3,12 +3,12 @@ import { StyleSheet, Text, View, Image, FlatList, Pressable } from 'react-native
 const Screen02 = ({ navigation }) => {
 
     const array = [
-        {id: 1, image: require('../img/bifour.png'), name: 'Pinarello', price: '$1800', type: "MOUNTAIN PIKE"},
-        {id: 2, image: require('../img/bione.png'), name: 'Pina Mountai', price: '$1700', type: "MOUNTAIN PIKE"},
-        {id: 3, image: require('../img/bithree.png'), name: 'Pina Bike', price: '$1500', type: "MOUNTAIN PIKE"},
-        {id: 4,image: require('../img/bitwo.png'), name: 'Pinarello', price: '$1900', type: "MOUNTAIN PIKE"},
-        {id: 5,image: require('../img/bithree.png'), name: 'Pinarello', price: '$2700', type: "ROAD PIKE"},
-        {id: 6,image: require('../img/bione.png'), name: 'Pinarello', price: '$1350', type: "ROAD PIKE"},
+        {id: 1, image: require('../img/bifour.png'), name: 'Pinarello', price: '$1800', type: "MOUNTAIN BIKE"},
+        {id: 2, image: require('../img/bione.png'), name: 'Pina Mountai', price: '$1700', type: "MOUNTAIN BIKE"},
+        {id: 3, image: require('../img/bithree.png'), name: 'Pina Bike', price: '$1500', type: "MOUNTAIN BIKE"},
+        {id: 4, image: require('../img/bitwo.png'), name: 'Pinarello', price: '$1900', type: "MOUNTAIN BIKE"},
+        {id: 5, image: require('../img/bithree.png'), name: 'Pinarello', price: '$2700', type: "ROAD BIKE"},
+        {id: 6, image: require('../img/bione.png'), name: 'Pinarello', price: '$1350', type: "ROAD BIKE"},
     ]
 
     const [selectedButton, setSelectedButton] = useState('ALL');
