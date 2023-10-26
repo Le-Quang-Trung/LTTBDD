@@ -5,7 +5,7 @@ const Screen03 = ({ navigation, route}) => {
     const {item} = route.params;
     return (
         <View style={styles.container}>
-            
+
             <View style={styles.img}>
                 <Image source={item.image} style={{width: 297, height: 310, top:20, left:40,  resizeMode: 'contain'}}></Image>
             </View>
