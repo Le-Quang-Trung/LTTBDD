@@ -24,7 +24,7 @@ const Screen01 = ({ navigation }) => {
 
     </View>
      
-    
+
   );
 };
 export default Screen01;
