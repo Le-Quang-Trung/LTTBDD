@@ -12,7 +12,7 @@ function Screen02({ route, navigation }) {
     const [search, setSearch] = useState('');
 
     useEffect(() => {
-        fetch("https://6544ab0b5a0b4b04436caf78.mockapi.io/api/ToDo")
+        fetch("https://6547087f902874dff3abe8cc.mockapi.io/ToDo")
             .then(response => response.json())
             .then(data => {
                 const username1Data = data.find(item => item.name === email);
