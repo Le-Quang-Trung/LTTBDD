@@ -7,7 +7,7 @@ function Screen01({navigation}) {
 
     return (
         <View style={styles.container}>
-            <Image style={{ width: '200px', height: '200px' }} resizeMode="contain" source={require("../assets/image.png")} />
+            <Image style={{ width: '200px', height: '200px' }} resizeMode="contain" source={require("../img/image.png")} />
             <Text style={{ fontSize: 30, fontWeight: "bold", color: "violet" }}>MANAGE YOUR {'\n'} TASK</Text>
             <View style={{width: '300px', height: '50px', borderColor: "#111", borderWidth: 1, borderRadius: 10, flexDirection: "row", alignItems: "center" }}>
                 <MaterialCommunityIcons style={{marginLeft: 10}} name="email-outline" size={30} color="black" />
