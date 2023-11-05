@@ -6,7 +6,7 @@ function Screen01({ navigation }) {
     const [dataFilter, setDataFilter] = useState([data])
 
     useEffect(() => {
-        fetch('https://6544ab0b5a0b4b04436caf78.mockapi.io/api/Donut')
+        fetch('https://6547087f902874dff3abe8cc.mockapi.io/Donut')
             .then((response) => response.json())
             .then((json) => {
                 setData(json);
@@ -49,14 +49,14 @@ function Screen01({ navigation }) {
             </View>
             <View style={{ marginTop: 10, width: "100%", alignItems: "center" }}>
                 {dataFilter.map((item) => (
-                    <Pressable key={item.id} onPress={()=>{navigation.navigate("Detail", {item})}} style={{ backgroundColor: "#f4dddd", width: "90%", height: 120, flexDirection: "row", alignItems: "center", paddingHorizontal: 10, borderRadius: 15, marginTop: 8 }}>
+                    <Pressable key={item.id} onPress={()=>{navigation.navigate("Screen02", {item})}} style={{ backgroundColor: "#f4dddd", width: "90%", height: 120, flexDirection: "row", alignItems: "center", paddingHorizontal: 10, borderRadius: 15, marginTop: 8 }}>
                         <View style={{ width: 100, height: 100, backgroundColor: "#fff", borderRadius: 15 }}>
                             <Image source={{ uri: item.image }} style={{ width: 100, height: 100, borderRadius: 15 }} />
                         </View>
                         <View style={{ marginLeft: 10, height: 100, justifyContent: "space-around" }}>
                             <Text style={{ fontSize: 18, fontWeight: "bold" }}>{item.name}</Text>
                             <Text style={{ fontSize: 17, fontWeight: "bold", color: "#706666" }}>{item.discription}</Text>
-                            <Text style={{ fontSize: 19, fontWeight: "bold" }}>${item.price}</Text>
+                            <Text style={{ fontSize: 19, fontWeight: "bold" }}>${item.price}.00</Text>
                         </View>
                     </Pressable>
                 ))
