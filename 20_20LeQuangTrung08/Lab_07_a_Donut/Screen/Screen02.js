@@ -16,7 +16,7 @@ function Screen02({ navigation , route }) {
                 <Text style={{ fontSize: 25, fontWeight: "bold" }}>{item.name}</Text>
                 <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: "space-between" }}>
                     <Text style={{ fontSize: 18, fontWeight: "bold", color: "#706666" }}>{item.discription}</Text>
-                    <Text style={{ fontSize: 30, fontWeight: "bold" }}>${item.price}</Text>
+                    <Text style={{ fontSize: 30, fontWeight: "bold" }}>${item.price}.00</Text>
                 </View>
             </View>
             <View style={{ width: "100%", paddingHorizontal: 10, flexDirection: "row", justifyContent: "space-between",alignItems: "center", marginTop: 50 }}>
