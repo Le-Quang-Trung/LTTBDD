@@ -42,7 +42,7 @@ function Screen02({ navigation , route }) {
                 <Text style={{ fontSize: 16, fontWeight: "bold", color: "#706666" }}>
                     Order a Large Pizza but the size is the equivalent of a medium/small from other places at the same price range.</Text>
             </View>
-            <Pressable style={{ width: "90%", height: 50, backgroundColor: "#f1b000", borderRadius: 10, alignItems: "center", justifyContent: "center", marginTop: 20 }}>
+            <Pressable onPress={()=>{navigation.navigate("Screen01")}} style={{ width: "90%", height: 50, backgroundColor: "#f1b000", borderRadius: 10, alignItems: "center", justifyContent: "center", marginTop: 20 }}>
                 <Text style={{ fontSize: 20, fontWeight: "bold", color: "#fff" }}>Add to cart</Text>
             </Pressable>
         </View>
