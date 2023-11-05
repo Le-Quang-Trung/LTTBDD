@@ -13,7 +13,7 @@ function Screen01({navigation}) {
                 <MaterialCommunityIcons style={{marginLeft: 10}} name="email-outline" size={30} color="black" />
                 <TextInput style={{outlineStyle: 'none', marginLeft: 10,width: "80%", height: "100%", fontSize: 20 }} value={email} onChangeText={setEmail} placeholder="Enter your name" />
             </View>
-            <Pressable onPress={()=>{navigation.navigate("Home", {email})}}  style={{marginTop: 20,width: 200, height: 45, backgroundColor: "#00bdd5", borderRadius: 10, justifyContent: "center", alignItems: "center", flexDirection: "row"}}>
+            <Pressable onPress={()=>{navigation.navigate("Screen02", {email})}}  style={{marginTop: 20,width: 200, height: 45, backgroundColor: "#00bdd5", borderRadius: 10, justifyContent: "center", alignItems: "center", flexDirection: "row"}}>
                 <Text style={{fontSize: 18, fontWeight: "bold", color: "#fff"}}>GET STARTED</Text>
                 <AntDesign name="arrowright" size={24} color="#fff" />
             </Pressable>
