@@ -6,16 +6,16 @@ function Screen01({ navigation }) {
     const [dataFilter, setDataFilter] = useState([data])
 
     useEffect(() => {
-        fetch('https://6547087f902874dff3abe8cc.mockapi.io/Donut')
+        fetch('https://6547087f902874dff3abe8cc.mockapi.io/Donut') //để fetch dữ liệu từ API
             .then((response) => response.json())
             .then((json) => {
                 setData(json);
-                setDataFilter(json); // Đặt dataFilter với dữ liệu ban đầu
+                setDataFilter(json); // Đặt dataFilter với data ban đầu
             })
             .catch((error) => console.error(error))
     }, [])
     
-    const handleOption = (option) => {
+    const handleOption = (option) => { //khai báo một function handleOption để xử lý việc lọc dữ liệu
         if (option === "ALL") { 
             setDataFilter(data)
         } else {
