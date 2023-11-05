@@ -16,7 +16,7 @@ function Screen01({ navigation }) {
     }, [])
     
     const handleOption = (option) => {
-        if (option === "ALL") {
+        if (option === "ALL") { 
             setDataFilter(data)
         } else {
             const filter = data.filter((item) => item.type === option)
