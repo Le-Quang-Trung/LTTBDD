@@ -5,14 +5,14 @@ import { FontAwesome } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 
 function Screen02({ route, navigation }) {
-    const [toDo, setToDo] = useState([]);
-    const [data, setData] = useState([]);
-    const [update, setUpdate] = useState(0);
-    const { email } = route.params;
-    const [search, setSearch] = useState('');
+    const [toDo, setToDo] = useState([]); // đại diện cho danh sách các mục công việc cần làm
+    const [data, setData] = useState([]); // lưu trữ dữ liệu được fetch từ API
+    const [update, setUpdate] = useState(0); // theo dõi các cập nhật
+    const { email } = route.params; 
+    const [search, setSearch] = useState(''); // giữ thông tin truy vấn tìm kiếm được nhập bởi người dùng
 
     useEffect(() => {
-        fetch("https://6547087f902874dff3abe8cc.mockapi.io/ToDo")
+        fetch("https://6547087f902874dff3abe8cc.mockapi.io/ToDo") // fetch dữ liệu từ một API dựa trên email được cung cấp
             .then(response => response.json())
             .then(data => {
                 const username1Data = data.find(item => item.name === email);

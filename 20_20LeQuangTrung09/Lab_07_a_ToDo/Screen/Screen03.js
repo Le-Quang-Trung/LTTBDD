@@ -9,6 +9,7 @@ function Screen03({ navigation, route }) {
     const [toDoNew, setToDoNew] = useState(item ? item : '');
 
     function addTextToUserById(userId, newText) {
+        // yêu cầu fetch để cập nhật dữ liệu trên máy chủ
         fetch(`https://6547087f902874dff3abe8cc.mockapi.io/ToDo${userId}`, {
           method: "PUT", 
           headers: {
@@ -28,6 +29,7 @@ function Screen03({ navigation, route }) {
           });
       }      
       const handleHome = () => {
+        // gọi hàm addTextToUserById để cập nhật dữ liệu và đến Screen02 với các tham số đã cập nhật như email, data và update
         addTextToUserById(data.id, toDoNew);
         navigation.navigate("Screen02", {email, data, update : 1});
       }
