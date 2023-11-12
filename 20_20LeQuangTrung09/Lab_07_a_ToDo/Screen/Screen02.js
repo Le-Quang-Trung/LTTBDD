@@ -52,7 +52,7 @@ function Screen02({ route, navigation }) {
                     <Image style={{ width: 50, height: 50 }} resizeMode="contain" source={require("../img/avt.png")} />
                     <View style={{ marginLeft: 10 }}>
                         <Text style={{ fontSize: 18, fontWeight: "bold" }}>{email}</Text>
-                        <Text style={{ fontSize: 18 }}>Have a agrete day a head</Text>
+                        <Text style={{ fontSize: 18 }}>Have a agrate day a head</Text>
                     </View>
                 </View>
             </View>

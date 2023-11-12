@@ -28,7 +28,7 @@ function Screen03({ navigation, route }) {
           });
       }      
       const handleHome = () => {
-        navigation.navigate("Home", {email, data, update})
+        navigation.navigate("Screen02", {email, data, update})
       }
 
     return (
@@ -52,7 +52,7 @@ function Screen03({ navigation, route }) {
                 <FontAwesome style={{ marginLeft: 20 }} name="sticky-note-o" size={24} color="green" />
                 <TextInput style={{ marginLeft: 10, width: "80%", height: "100%", fontSize: 20, outlineStyle: 'none' }} value={toDoNew} onChangeText={setToDoNew} placeholder="Enter your job" />
             </View>
-            <Pressable onPress={() => { navigation.navigate("Screen02", { email})}} style={{ marginTop: 20, width: 200, height: 45, backgroundColor: "#00bdd5", borderRadius: 10, justifyContent: "center", alignItems: "center", flexDirection: "row" }}>
+            <Pressable onPress={addTextToUserById(data.id,toDoNew)} style={{ marginTop: 20, width: 200, height: 45, backgroundColor: "#00bdd5", borderRadius: 10, justifyContent: "center", alignItems: "center", flexDirection: "row" }}>
                 <Text style={{ fontSize: 18, fontWeight: "bold", color: "#fff" }}>FINISH</Text>
                 <AntDesign name="arrowright" size={24} color="#fff" />
             </Pressable>

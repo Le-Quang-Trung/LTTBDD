@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image, TextInput, Pressable } from 'react-nativ
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 function Screen01({navigation}) {
-    const [email, setEmail] = React.useState('username2');
+    const [email, setEmail] = React.useState('username1');
 
     return (
         <View style={styles.container}>
