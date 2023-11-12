@@ -35,7 +35,7 @@ function Screen02({ route, navigation }) {
         if (search === "") {
             setToDo(toDo)
         } else {
-            const filtered = toDo.filter(item => item.text.toLowerCase().includes(search.toLowerCase()));
+            const filtered = toDo.filter(item => item.text && item.text.toLowerCase().includes(search.toLowerCase()));
             setToDo(filtered);
         }
     }, [search]);
@@ -52,7 +52,7 @@ function Screen02({ route, navigation }) {
                     <Image style={{ width: 50, height: 50 }} resizeMode="contain" source={require("../img/avt.png")} />
                     <View style={{ marginLeft: 10 }}>
                         <Text style={{ fontSize: 18, fontWeight: "bold" }}>{email}</Text>
-                        <Text style={{ fontSize: 18 }}>Have a agrate day a head</Text>
+                        <Text style={{ fontSize: 18 }}>Have a agrete day a head</Text>
                     </View>
                 </View>
             </View>
